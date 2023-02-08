@@ -1,3 +1,7 @@
-<script setup></script>
+<script setup>
+    import HeroImage from '../components/HeroImage.vue'
+</script>
 
-<template></template>
+<template>
+    <HeroImage />
+</template>
