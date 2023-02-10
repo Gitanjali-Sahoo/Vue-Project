@@ -1,10 +1,11 @@
 <script setup>
     import { RouterLink, RouterView } from 'vue-router'
+    // import Form from '../components/Form.vue'
 </script>
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <RouterLink class="navbar-brand" to="/">University</RouterLink>
+            <RouterLink class="navbar-brand" to="/">Digilib</RouterLink>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -26,11 +27,11 @@
                             >Home</RouterLink
                         >
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <RouterLink class="nav-link" to="/about"
                             >About</RouterLink
                         >
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown">
                         <a
                             class="nav-link dropdown-toggle"
@@ -39,39 +40,47 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            Dropdown
+                            Browse
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Trending</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="#"
-                                    >Another action</a
+                                    >Collections</a
                                 >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Subjects</a>
                             </li>
                             <li><hr class="dropdown-divider" /></li>
                             <li>
-                                <a class="dropdown-item" href="#"
-                                    >Something else here</a
-                                >
+                                <a class="dropdown-item" href="#">Login</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                    />
-                    <button class="btn btn-outline-success" type="submit">
-                        Search
-                    </button>
-                </form>
+                <div class="d-flex">
+                    <router-link to="/about" custom v-slot="{ navigate }">
+                        <button
+                            class="btn btn-outline-success"
+                            @click="navigate"
+                            role="link"
+                        >
+                            Log In
+                        </button>
+                    </router-link>
+
+                    <button class="btn btn-outline-success">Sign Up</button>
+                </div>
             </div>
         </div>
     </nav>
     <RouterView />
 </template>
+<style scoped>
+    .btn {
+        margin: 10px;
+    }
+</style>
