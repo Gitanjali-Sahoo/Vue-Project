@@ -42,6 +42,6 @@
         justify-content: space-evenly;
     }
     .card {
-        background-color: rgb(244, 244, 243);
+        background-color: rgb(196, 196, 192);
     }
 </style>

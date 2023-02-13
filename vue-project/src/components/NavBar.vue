@@ -27,11 +27,7 @@
                             >Home</RouterLink
                         >
                     </li>
-                    <!-- <li class="nav-item">
-                        <RouterLink class="nav-link" to="/about"
-                            >About</RouterLink
-                        >
-                    </li> -->
+
                     <li class="nav-item dropdown">
                         <a
                             class="nav-link dropdown-toggle"
@@ -46,21 +42,38 @@
                             <li>
                                 <a class="dropdown-item" href="#">Trending</a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="#"
-                                    >Collections</a
-                                >
-                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+
                             <li>
                                 <a class="dropdown-item" href="#">Subjects</a>
                             </li>
+
                             <li><hr class="dropdown-divider" /></li>
                             <li>
-                                <a class="dropdown-item" href="#">Login</a>
+                                <a class="dropdown-item" href="#"
+                                    >Advanced Searched</a
+                                >
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Random Books</a
+                                >
                             </li>
                         </ul>
                     </li>
                 </ul>
+                <form class="d-flex" role="search">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
                 <div class="d-flex">
                     <router-link to="/about" custom v-slot="{ navigate }">
                         <button
@@ -82,5 +95,8 @@
 <style scoped>
     .btn {
         margin: 10px;
+    }
+    .form-control {
+        height: 50px;
     }
 </style>

@@ -1,0 +1,72 @@
+[
+    {
+        "id": "List",
+        "name": "Subjects",
+        "Collections": "Number Of Books"
+    },
+    {
+        "id": "1",
+        "name": "Arts",
+        "Collections": "90799"
+    },
+    {
+        "id": "2",
+        "name": "Science & Mathematics",
+        "Collections": "129933"
+    },
+    {
+        "id": "3",
+        "name": "Health & Wellness",
+        "Collections": "975328"
+    },
+    {
+        "id": "4",
+        "name": "Places",
+        "Collections": "129908"
+    },
+    {
+        "id": "5",
+        "name": "History",
+        "Collections": "245689"
+    },
+    {
+        "id": "6",
+        "name": "Animals",
+        "Collections": "4578899"
+    },
+    {
+        "id": "7",
+        "name": "Fiction",
+        "Collections": "9847667"
+    },
+    {
+        "id": "8",
+        "name": "Business & Finance",
+        "Collections": "78429"
+    },
+    {
+        "id": "9",
+        "name": "Biography",
+        "Collections": "76446"
+    },
+    {
+        "id": "10",
+        "name": "Social Sciences",
+        "Collections": "244366"
+    },
+    {
+        "id": "11",
+        "name": "Books by Language",
+        "Collections": "123990"
+    },
+    {
+        "id": "12",
+        "name": "Children's",
+        "Collections": "612990"
+    },
+    {
+        "id": "13",
+        "name": "Textbooks",
+        "Collections": "129904"
+    }
+]
