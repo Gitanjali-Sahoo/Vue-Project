@@ -1,40 +1,34 @@
 <template>
-    <div>
+    <div class="slideImage">
         <transition-group name="fade" tag="div">
             <div v-for="i in [currentIndex]" :key="i">
-                <img :src="currentImg" />
+                <img :src="currentImg" class="slides" />
             </div>
         </transition-group>
-        <a class="prev" @click="prev" href="#">&#10094;</a>
-        <a class="next" @click="next" href="#">&#10095;</a>
     </div>
 </template>
-
 <script>
     export default {
-        name: 'ImageSlider',
+       
         data() {
             return {
                 images: [
-                    '../assets/Image/college-student-gbf476762b_1920.jpg',
-                    'image2.jpg',
-                    'image3.jpg',
-                    'image2.jpg'
+                    'https://images.unsplash.com/photo-1614859475299-814a09cd2e79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                    'https://images.unsplash.com/photo-1575249142951-35b95b9bb5b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                    'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                    'https://images.pexels.com/photos/8100816/pexels-photo-8100816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
                 ],
                 timer: null,
                 currentIndex: 0
             }
         },
-
         mounted: function () {
             this.startSlide()
         },
-
         methods: {
             startSlide: function () {
-                this.timer = setInterval(this.next, 2000)
+                this.timer = setInterval(this.next, 3000)
             },
-
             next: function () {
                 this.currentIndex += 1
             },
@@ -42,7 +36,6 @@
                 this.currentIndex -= 1
             }
         },
-
         computed: {
             currentImg: function () {
                 return this.images[
@@ -52,11 +45,10 @@
         }
     }
 </script>
-
-<style>
+<style scoped>
     .fade-enter-active,
     .fade-leave-active {
-        transition: all 0.9s ease;
+        transition: all 1s ease;
         overflow: hidden;
         visibility: visible;
         position: absolute;
@@ -69,35 +61,16 @@
         width: 100%;
         opacity: 0;
     }
-    img {
-        height: 600px;
-        width: 100%;
-    }
-    .prev,
-    .next {
-        cursor: pointer;
-        position: absolute;
-        top: 40%;
-        width: auto;
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.7s ease;
-        border-radius: 0 4px 4px 0;
-        text-decoration: none;
-        user-select: none;
-    }
+
     /* Position the "next button" to the right */
-    .next {
-        right: 0;
-    }
-    .prev {
-        left: 0;
-    }
     /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.9);
+
+    .slides {
+        width: 900px;
+        height: 600px;
+        margin: 60px;
+    }
+    .slideImage {
+        justify-content: center;
     }
 </style>

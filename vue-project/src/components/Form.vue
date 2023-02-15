@@ -100,8 +100,7 @@
                 }
             },
             handleSubmission() {
-                alert('Thank You. Now you are logged in')
-                
+                alert('Thank for loggin in')
             }
         }
     }

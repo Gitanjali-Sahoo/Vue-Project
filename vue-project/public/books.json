@@ -1,10 +1,5 @@
 [
     {
-        "id": "List",
-        "name": "Subjects",
-        "Collections": "Number Of Books"
-    },
-    {
         "id": "1",
         "name": "Arts",
         "Collections": "90799"

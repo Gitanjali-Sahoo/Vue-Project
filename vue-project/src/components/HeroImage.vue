@@ -10,12 +10,12 @@
 <template>
     <div class="container">
         <img
-            src="../assets/Image/college-student-gbf476762b_1920.jpg"
+            src="../assets/Image/anete-lusina-zwsHjakE_iI-unsplash.jpg"
             alt="Snow"
             style="width: 100%"
         />
         <div>
-            <button class="btn btn-danger">
+            <button class="btn btn-primary">
                 {{ go }}
             </button>
         </div>
