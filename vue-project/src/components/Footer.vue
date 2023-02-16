@@ -52,7 +52,9 @@
   list-style: none;
 }
 #footer {
-  padding: 20px;
-  position: relative;
+    
+  /* padding: 20px;
+  position: fixed;
+ bottom:0 */
 }
 </style>

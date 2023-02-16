@@ -1,19 +1,28 @@
-<script setup>
-import Form from "../components/Form.vue";
-import Footer from "../components/Footer.vue";
-</script>
-
 <template>
-  <Form />
-  <div id="footer">
-    <Footer />
+    
+  <div id="slider-app">
+    <ImageSlider />
   </div>
-</template>
+  <!-- <div id="footer">
+    <Footer />
+  </div> -->
 
+</template>
+<script setup>
+import ImageSlider from "../components/ImageSlider.vue";
+// import Footer from "../components/Footer.vue";
+</script>
 <style scoped>
-#footer {
+#slider-app {
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+
+        justify-content: center;
+
+    }
+    #footer {
   background-color: rgb(225, 220, 197);
   padding: 20px;
-  position: sticky;
-}
-</style>
+  width: 100%;
+}</style>
